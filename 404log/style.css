@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import url('https://db.onlinewebfonts.com/c/28c0ba929947563500b21da15a88c6fe?family=TacticSans-Reg');
+* {
+  box-sizing: border-box;
+}
+body {
+  font-size: 14px;
+}
+.container {
+  width: 100vh;
+  background: #FFFFFF;
+  position: relative;
+}
+.photo {
+  width: 550px;
+  height: 700px;
+  background: url("./photo_2024-04-07_05-25-23.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 1;
+  position: absolute;
+  top: 100px;
+  left: 253px;
+  overflow: hidden;
+}
+
+
+.what {
+  width: 600px;
+  color: #000000;
+  position: absolute;
+  top: 200px;
+  left: 880px;
+  font-family: "TacticSans-Reg";
+  font-size: 48px;
+  opacity: 1;
+  text-align: left;
+}
+
+.wait {
+  width: 378px;
+  color: #000000;
+  position: absolute;
+  top: 270px;
+  left: 880px;
+  font-family: "TacticSans-Reg";
+  font-size: 28px;
+  opacity: 1;
+  text-align: left;
+}
+.go {
+  width: 200px;
+  color: #000000;
+  position: absolute;
+  top: 390px;
+  left: 880px;
+  font-size: 20px;
+  opacity: 1;
+  text-align: left;
+  text-decoration: none;
+
+  font-family: "Open Sans", serif;
+  font-weight: 300;
+}
+
+.go:hover {
+  color: #CAFF38;
+  transition: 0.2s;
+}
+
+

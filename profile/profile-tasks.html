@@ -1,0 +1,308 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Профиль Задания</title>
+</head>
+<body>
+    <!-- Шапка -->
+    <header>
+        <!-- Логотип -->
+        <div class="logo">
+            <img src="img/logo.svg" alt="giper.fm">
+        </div>
+
+        <!-- Главное меню -->
+        <nav class="main-menu">
+            <a href="../404/index.html" class="nav">Магазин</a>
+            <a href="../404/index.html" class="nav">События</a>
+            <a href="../404/index.html" class="nav">FAQ</a>
+        </nav>
+        
+        <!-- Меню справа -->
+        <nav class="right-menu">
+            <a href="../404/index.html" class="right"> <img src="img/icon-bell.svg" alt="Уведомления" width="16" height="19"> </a>
+            <a href="../404/index.html" class="right"> <img src="img/icon-basket.svg" alt="Корзина" width="22" height="20"> </a>
+            
+            <!-- Аватарка и строка с деньгами -->
+            <div class="avatar-and-money">
+                <img class="avatar" src="img/profilepicture.png" alt="Аватарка">
+                <div>
+                    <img src="img/coin.png" width="20" height="19">
+                    <span class="money">
+                        <a href="../404/index.html">1250g</a>
+                    </span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+
+    <main>
+        <!-- Столбец с профилем -->
+        <div class="column-profile">
+            <!-- Шапка профиля -->
+            <div class="profile-header">
+                <div class="avatar-and-exit">
+                    <img src="img/profilepicture-mid.png" alt="Аватарка" width="120" height="120">
+                    <br>
+                    <a href="../login/index.html" class="quit">Выйти</a>
+                </div>
+
+                <div class="fio-block">
+                    <span class="text-fio">Соловьев Максим Сергеевич</span> <br>
+                    <span class="text-hashtag">#abcde</span> <br>
+                    <span class="text-job">Product manager</span> <br>
+                    <a href="../404/index.html" class="text-edit">Редактировать профиль</a>
+                </div>
+            </div>
+
+            <!-- Активные заказы -->
+            <div class="active-orders">
+                <p class="text-active">Активные заказы</p>
+                
+                <div class="active-order">
+                    <img src="img/t-shirt.png">
+                    Худи giper
+                </div>
+                <div class="active-order">
+                    <img src="img/kontsilaria.png">
+                    Стартер пак
+                </div>
+
+                <a href="../404/index.html" class="text-history">- История покупок</a>
+            </div>
+
+            <!-- Блок финансов -->
+            <div class="finance-block">
+                <div class="finance-row">
+                    <img src="img/money-green.png" width="30" height="30">
+                    <span>1250</span>
+                </div>
+
+                <button class="finance-button">Перевести</button>
+                <button class="finance-button">Запросить</button>
+            </div>
+
+            <!-- Задания -->
+            <div class="tasks-block">
+                <span class="text-tasks-title event-tab" id="tasks-link">Мои награды</span>
+                <span class="text-tasks-title event-tab" id="achievements-link">Задания</span>
+                
+                <div class="progress-block">
+
+                    <div class="progress-bar">
+                        <div class="progress"></div>
+                    </div>
+
+                    <span class="text-progress">42%</span>
+                </div>
+            </div>
+
+            <!-- Содержание заданий (Серый блок)-->
+            <div class="tasks-content">
+                <div class="work">
+                    <div class="wowo">
+                        <img class="img-work" src="../work-img/7.svg">
+                        <p>Совершите 8/10 покупок в магазине</p>
+                    </div>
+
+                    <div class="wowo">
+                        <img class="img-work" src="../work-img/6.svg">
+                        <p>Совершите 8/20 покупок в магазине</p>
+                    </div>
+
+                    <div class="line"></div>
+
+                    <div class="wowo">
+                        <img class="img-work" src="../work-img/5.svg">
+                        <p>Посетите 2/10 мероприятий подряд</p>
+                    </div>
+
+                    <div class="line"></div>
+
+                    <div class="wowo">
+                        <img class="img-work" src="../work-img/4.svg">
+                        <p>Примите участие в футбольной игре</p>
+                    </div>
+
+                    <div class="wowo">
+                        <img class="img-work" src="../work-img/3.svg">
+                        <p>Примите участие в марафоне</p>
+                    </div>
+
+                    <div class="wowo">
+                        <img class="img-work" src="../work-img/2.svg">
+                        <p>Примите участие в 3 разных спортивных играх</p>
+                    </div>
+
+                    <div class="line"></div>
+
+                    <div class="wowo">
+                        <img class="img-work" src="../work-img/1.svg">
+                        <p>Посетите Spa процедуры</p>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+
+
+
+        <!-- Столбец Ближайшие события -->
+        <div class="column-events">
+            <div class="events-header">
+                <a class="text-events-title event-tab" id="upcoming-link" href="../404/index.html">Ближайшее событие</a>
+                <a class="text-events-title event-tab" id="past-link" href="../404/index.html">Прошедшее</a>
+            </div>
+
+
+
+            <div class="events-body">
+                <div class="event upcoming-event">
+                    <img class="event-img1" src="img/event1.png" alt="Картинка события">    
+                    <div class="event-dots1">...</div>
+                    
+                    <div class="event-info1">
+                        <!-- Блок с информацией события -->
+                        <span class="event-title1">
+                            Universe Ecom <br>
+                            Convention 2024
+                        </span>
+                        <br>
+                        <span class="event-date1">22-23 мая</span>
+
+                        <div class="event-profit1">
+                            +25 
+                            <img src="img/coin.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="event upcoming-event" id="event2">
+                    <img class="event-img2" src="img/event2.png" alt="Картинка события">    
+                    
+                    <div class="event-dots2">...</div>
+                    
+                    <div class="event-info2">
+                        <span class="event-title2">
+                            Футбольный матч
+                        </span>
+                        <br>
+                        <span class="event-date2">11 июня | 17:00</span>
+
+                        <div class="event-profit2">
+                            +200
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="event past-event">
+                    <img class="" alt="Картинка события">    
+                    
+                    <div class=""></div>
+                    
+                    <div class="">
+                    </div>
+                </div>
+            </div>
+
+            <div class="operations-block">
+
+
+
+
+                <div class="frame">
+                    <div class="text-tasks-title" style="text-align: right;">Операции</div>
+                    <div class="div">
+                        <div class="div-2">
+                            <div class="text-wrapper-2">+200</div>
+                            <img class="component" src="../work-img/green.svg">
+                        </div>
+                        <div class="text-wrapper-3">Участие в событии</div>
+                    </div>
+                    <div class="div-3">
+                        <div class="div-2">
+                            <div class="text-wrapper-2">+150</div>
+                            <img class="component" src="../work-img/green.svg">
+                        </div>
+                        <div class="text-wrapper-3">Участие в событии</div>
+                    </div>
+                    <div class="div-4">
+                        <div class="div-5">
+                            <div class="text-wrapper-2">-70</div>
+                            <img class="component" src="../work-img/fiol.svg">
+                        </div>
+                        <div class="text-wrapper-3">Покупка</div>
+                    </div>
+                    <div class="div-6">
+                        <div class="div-2">
+                            <div class="text-wrapper-2">+25</div>
+                            <img class="component" src="../work-img/green.svg">
+                        </div>
+                        <div class="text-wrapper-3">Участие в событии</div>
+                    </div>
+                    <div class="div-7">
+                        <div class="div-5">
+                            <div class="text-wrapper-2">-20</div>
+                            <img class="component" src="../work-img/fiol.svg">
+                        </div>
+                        <div class="text-wrapper-3">Перевод</div>
+                    </div>
+                    <div class="div-8">
+                        <div class="div-2">
+                            <div class="text-wrapper-2">+50</div>
+                            <img class="component" src="../work-img/green.svg">
+                        </div>
+                        <div class="text-wrapper-3">Организация</div>
+                    </div>
+                    <div class="div-9">
+                        <div class="div-2">
+                            <div class="text-wrapper-2">+20</div>
+                            <img class="component" src="../work-img/green.svg">
+                        </div>
+                        <div class="text-wrapper-3">Бонус</div>
+                    </div>
+                    <div class="div-10">
+                        <div class="div-2">
+                            <div class="text-wrapper-2">-75</div>
+                            <img class="component" src="../work-img/fiol.svg">
+                        </div>
+                        <div class="text-wrapper-3">Открытие лутбокса</div>
+                    </div>
+                    <div class="text-wrapper-4">26.04.2024</div>
+                    <div class="text-wrapper-5">07.05.2024</div>
+                    <div class="text-wrapper-6">19.05.2024</div>
+                    <div class="text-wrapper-7">22.05.2024</div>
+                    <div class="text-wrapper-8">01.06.2024</div>
+                    <div class="text-wrapper-9">14.06.2024</div>
+                    <div class="text-wrapper-10">28.06.2024</div>
+                    <div class="text-wrapper-11">10.07.2024</div>
+                    <div class="group"><div class="rectangle"></div></div>
+                </div>
+
+            </div>
+        </div>
+
+
+
+
+
+        
+    </main>
+
+
+    <!-- Подвал -->
+    <footer>
+        <a href="../404/index.html">
+            <img src="img/footer-icon.png" alt="Поддержка" width="60" height="60">
+        </a>
+    </footer>
+<script src="../profile/in.js"></script>
+</body>
+</html>

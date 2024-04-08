@@ -1,0 +1,1012 @@
+﻿/* Подключение скачанных шрифтов */
+@font-face {
+    font-family: 'open-sans';
+    src: url('fonts/OpenSans-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'tactic-sans';
+    src: url('fonts/TacticSans-Med.ttf');
+}
+
+
+
+/* Все элементы */
+*{
+    /* В ширину и высоту включать паддинги и границы  */
+    box-sizing: border-box;
+}
+
+/* Убираем отступы у body */
+body{
+    margin: 0;
+    padding: 0;
+}
+
+/* Вся шапка */
+header{
+    height: 113px;
+    padding-left: 43px;
+    padding-right: 43px;
+
+    display: flex;
+    /* Расположить элементы по краям от друг друга*/
+    justify-content: space-between;
+    align-items: center; /*По вертикали по центру*/
+}
+
+/* Логотип */
+.logo{
+    width: 141px;
+    height: 29px;
+}
+
+/* Меню по центру */
+.main-menu{
+    text-transform: uppercase;
+	font-size: 24px;
+}
+
+.main-menu:hover {
+	color: #CAFF38;
+}
+
+.nav {
+    font-family: open-sans, sans-serif;
+    font-size: 24px;
+	display: inline-block;
+	vertical-align: top;
+	margin: 0 20px;
+	color: #3F4548;
+	text-decoration: none;
+	transition: color .1s linear;
+	position: relative;
+    text-transform: none;
+}
+
+.nav:hover {
+	color: black;
+}
+
+.nav:hover:before {
+    transform: scaleX(1);
+    transition: transform 0.25s;
+    transform-origin: left;
+
+}
+
+.nav:before {
+    content: '';
+    width: 100%;
+    height: 4px;
+    background-color: #CAFF38;
+    position: absolute;
+    left: 0; bottom: 5px;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.25s;
+    z-index: -1;
+}
+
+
+
+
+
+
+
+
+/* Меню справа */
+.right-menu{
+    display: flex;
+    align-items: center;
+    gap: 21px;
+}
+.right-menu a{
+    text-decoration: none;
+    color: black;
+}
+
+.right {
+    position: relative;
+}
+
+.right:hover {
+	color: black;
+    opacity: 0.5;
+    transition: linear 0.1s;
+}
+
+.right:hover:before {
+    transform: scaleX(1);
+    transition: transform 0.25s;
+    transform-origin: left;
+
+}
+
+.right:before {
+    content: '';
+    width: 100%;
+    height: 4px;
+    background-color: #CAFF38;
+    position: absolute;
+    left: 0; bottom: 0px;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.25s;
+    z-index: -1;
+}
+
+
+
+
+
+/* Аватарка и строка с деньгами */
+.avatar-and-money{
+    text-align: center;
+}
+.money{ /*Деньги*/
+    font-family: tactic-sans, sans-serif;
+    font-size: 16px;
+}
+
+
+
+
+
+/* Главный контент в два столбика */
+main{
+    padding-left: 49px;
+    display: flex;
+    justify-content: space-between;
+    overflow-x: hidden;
+
+}
+
+
+/* Столбец с информацией профиля */
+.column-profile{
+    max-width: 668px;
+    margin-top: 83px;
+}
+
+    .profile-header{
+        display: flex;
+        justify-content: space-between;
+    }
+    .avatar-and-exit{
+        text-align: center;
+        font-family: open-sans, sans-serif;
+        font-size: 16px;
+    }
+
+    .quit {
+        text-align: center;
+        font-family: open-sans, sans-serif;
+        font-size: 16px;
+        text-decoration: none;
+        color: #000;
+    }
+
+    .quit:hover {
+        color: #6F6F70;
+        transition: 0.3s;
+    }
+
+    .fio-block{
+        margin-left: 22px;
+        font-family: tactic-sans, sans-serif;
+        text-decoration: none;
+    }
+    .text-fio{
+        font-size: 32px;
+    }
+    .text-hashtag{
+        font-size: 16px;
+    }
+    .text-job{
+        display: block;
+        text-align: right;
+        font-size: 16px;
+    }
+    .text-edit{
+        text-decoration: none;
+        color: #000;
+    }
+
+    .text-edit:hover {
+        color: #6F6F70;
+        transition: color 0.1s;
+    }
+
+
+
+    /* Активные заказы */
+    .active-orders{
+        font-family: tactic-sans, sans-serif;
+    }
+    .text-active{
+        font-size: 32px;
+    }
+
+    .active-order{
+        display: flex;
+        font-size: 22px;
+        align-items: center;
+        margin-bottom: 16px;
+    }
+    .active-order img{
+        width: 63px;
+        height: 63px;
+        margin-right: 8px;
+    }
+    .text-history{
+        font-family: open-sans, sans-serif;
+        font-size: 16px;
+        text-decoration: none;
+        color: #000;
+    }
+
+
+
+    /* Блок финансов */
+    .finance-block{
+        margin-top: 68px;
+        font-family: open-sans, sans-serif;
+    }
+
+    .finance-row{
+        font-family: tactic-sans, sans-serif;
+        font-size: 28px;
+        margin-bottom: 10px;
+        display: flex;
+        align-items: center;
+    }
+
+    .finance-button{
+        margin-right: 30px;
+        font-size: 20px;
+        width: 200px;
+        height: 50px;
+        border-radius: 10px;
+        border: 3px solid #CAFF38;
+        background-color: white;
+        cursor: pointer;
+    }
+
+    .finance-button:hover {
+        color: #000;
+        border-color: #caff38;
+        background: #caff38;
+        transition: linear 0.1s;
+      }
+
+    /* Блок заданий */
+    .tasks-block{
+        margin-top: 75px;
+        font-family: tactic-sans, sans-serif;
+    }
+
+
+    .text-tasks-title{
+        font-size: 32px;
+        cursor: pointer;
+    }
+
+    .text-tasks-title:last-of-type{
+        margin-left: 80px;
+    }
+
+    /* Прогресс-блок */
+    .progress-block{
+        margin-top: 40px;
+        display: flex;
+        align-items: center;
+    }
+    .progress-bar{
+        position: relative;
+        margin-right: 17px;
+        width: 485px;
+        height: 6px;
+        background-color: #D9D9D9;
+    }
+    .progress{
+        position: absolute;
+        width: 211px;
+        height: 6px;
+        background-color: #CAFF38;
+    }
+
+        
+    /* Контент заданий */
+    .tasks-content{
+        margin-top: 40px;
+        max-width: 900px;
+        height: 600px;
+        background-color: white;
+        margin-bottom: 79px;
+    }
+
+
+
+
+/* Столбец события */
+.column-events{
+    margin-top: 116px;
+}
+    .events-header{
+        font-family: tactic-sans, sans-serif;
+    }
+
+    .text-events-title{
+        font-size: 32px;
+        margin-right: 84px;
+    }
+
+    .text-events-title {
+        color: #3F4548;
+        text-decoration: none;
+        transition: color .1s linear;
+        position: relative;
+    }
+    
+    .text-events-title:hover {
+        color: black;
+    }
+    
+    .text-events-title:hover:before {
+        transform: scaleX(1);
+        transition: transform 0.25s;
+        transform-origin: left;
+    
+    }
+    
+    .text-events-title:before {
+        content: '';
+        width: 100%;
+        height: 6px;
+        background-color: #CAFF38;
+        position: absolute;
+        left: 0; bottom: 3px;
+        transform: scaleX(0);
+        transform-origin: right;
+        transition: transform 0.25s;
+        z-index: -1;
+    }
+
+    .text-events-title:hover:before,
+    .text-events-title:before {
+        display: block;
+    }
+
+    .event-tab.active {
+        color: black;
+        position: relative;
+      }
+      
+      .event-tab.active:before {
+        content: '';
+        width: 100%;
+        height: 6px;
+        background-color: #CAFF38;
+        position: absolute;
+        left: 0; bottom: 3px;
+        transform: scaleX(1);
+        transform-origin: right;
+        transition: transform 0.25s;
+        z-index: -1;
+      }
+    
+    
+
+    .events-body{
+        max-width: 750px;
+        margin-top: 44px;
+        display: flex;
+        gap: 85px;
+    }
+
+
+    
+    /* Событие */
+    .event{
+        width: 351px;
+        position: relative;
+        border-radius: 14px;
+    }
+    
+    .event-img1{
+        border-radius: 14px;
+        position: absolute;
+        max-width: 351px;
+        max-height: 400px;
+    }
+
+    .event-img2{
+        border-radius: 14px;
+        position: absolute;
+        max-width: 351px;
+        max-height: 391px;
+        left: 58px;
+    }
+
+    .event-dots1{
+        position: absolute;
+        right: 0;
+        top: 0;
+        font-weight: bold;
+        font-size: 35px;
+        letter-spacing: 3px;
+        color: white;
+    }
+
+    .event-dots2{
+        position: absolute;
+        right: 0;
+        top: 0;
+        font-weight: bold;
+        font-size: 35px;
+        letter-spacing: 3px;
+        color: white;
+        right: -40px;
+    }
+
+    .event-info1{
+        position: absolute;
+        top: 242px;
+        width: 351px;
+        height: 148px;
+        background-color: rgba(211, 211, 211, 0.196);
+        border-top: 1px solid white;
+        border-radius: 14px;
+    }
+
+    .event-info2{
+        position: absolute;
+        top: 242px;
+        width: 351px;
+        height: 148px;
+        background-color: rgba(211, 211, 211, 0.196);
+        border-top: 1px solid white;
+        border-radius: 14px;
+        left: 58px;
+        backdrop-filter: blur(5px);
+    }
+
+.wowo {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.work {
+    width: 683px;
+}
+
+.img-work {
+    width: 67px;
+    height: 67px;
+}
+
+p {
+    margin-left: 20px;
+    color: #000;
+    font-family: tactic-sans;
+    font-weight: 400;
+    font-size: 22px;
+}
+
+.line {
+    border-bottom: 3px solid #3F4548;
+    margin: 20px 0;
+}
+
+.event-tab.tasks-tab--active {
+    color: black;
+    position: relative;
+  }
+  
+  .event-tab.tasks-tab--active:before {
+    content: '';
+    width: 100%;
+    height: 6px;
+    background-color: #CAFF38;
+    position: absolute;
+    left: 0; bottom: 3px;
+    transform: scaleX(1);
+    transform-origin: right;
+    transition: transform 0.25s;
+    z-index: -1;
+  }
+  
+
+  .text-tasks-title:last-of-type{
+    margin-left: 80px;
+}
+
+
+  .event-tab {
+    display: inline-block;
+    font-family: tactic-sans, sans-serif;
+    font-size: 32px;
+    color: #3F4548;
+    text-decoration: none;
+    transition: color .1s linear;
+    position: relative;
+  }
+  
+  .event-tab:before {
+    content: '';
+    width: 100%;
+    height: 6px;
+    background-color: #CAFF38;
+    position: absolute;
+    left: 0; bottom: 3px;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.25s;
+    z-index: -1;
+  }
+  
+  .event-tab:hover {
+    color: black;
+  }
+  
+  .event-tab:hover:before {
+    transform: scaleX(1);
+    transition: transform 0.25s;
+    transform-origin: left;
+  }
+
+
+  .event-info1{
+    padding-top: 13px;
+    padding-left: 16px;
+    padding-right: 16px;
+    backdrop-filter: blur(5px); /* Размытие фона */
+
+    position: absolute;
+    top: 242px;
+    width: 351px;
+    height: 148px;
+    background-color: rgba(211, 211, 211, 0.196);
+    border-top: 1px solid white;
+    border-radius: 14px;
+}
+
+.event-title1{
+    font-family: tactic-sans, sans-serif;
+    font-size: 18px;
+    color: white;
+}
+.event-date1{
+    font-family: tactic-sans, sans-serif;
+    font-size: 15px;
+    color: white;
+}
+
+.event-profit1{
+    text-align: right;
+    position: absolute;
+    right: 16px;
+    top: 13px;
+
+    font-family: tactic-sans, sans-serif;
+    font-size: 20px;
+    color: white;
+}
+
+
+.event-title2{
+    font-family: tactic-sans, sans-serif;
+    font-size: 18px;
+    color: white;
+    position: absolute;
+    right: 150px;
+    top: 13px;
+}
+.event-date2{
+    position: absolute;
+    right: 202px;
+    top: 35px;
+    font-family: tactic-sans, sans-serif;
+    font-size: 15px;
+    color: white;
+}
+
+.event-profit2{
+    text-align: right;
+    position: absolute;
+    right: 40px;
+    top: 13px;
+
+    font-family: tactic-sans, sans-serif;
+    font-size: 20px;
+    color: white;
+}
+
+
+    /* Операции */
+    .operations-block{
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        font-family: tactic-sans, sans-serif;
+        margin-top: 480px;
+        margin-right: 23px;
+    }
+
+    .operations-content{
+        margin-top: 58px;
+        width: 560px;
+        height: 436px;
+        padding: 0 10px;
+    }
+
+
+    .content-main {
+        display: flex;
+        justify-content: space-between;
+        margin: 25px 0;
+    }
+
+    .concon {
+        color: var(--, #0F1011);
+        font-family: tactic-sans, sans-serif;
+        font-size: 22px;
+        font-style: normal;
+        line-height: normal;
+    }
+
+    .context {
+        color: var(--, #0F1011);
+        font-family: open-sans, sans-serif;
+        font-size: 22px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+
+    .condate {
+        color: var(--txt-on-grey, #6F6F70);
+        font-family: open-sans, sans-serif;
+        font-size: 22px;
+    }
+
+    .coinxxx {
+        display: flex;
+        align-items: center;
+    }
+
+    .imgcon {
+        margin-left: 10px;
+    }
+
+
+
+
+/* Подвал */
+footer{
+    text-align: right;
+    padding-right: 43px;
+    padding-bottom: 23px;
+}
+
+
+
+
+
+
+
+:root {
+    --cards-upper-font-family: "Adamina", Helvetica;
+    --cards-upper-font-weight: 400;
+    --cards-upper-font-size: 24px;
+    --cards-upper-letter-spacing: 0px;
+    --cards-upper-line-height: normal;
+    --cards-upper-font-style: normal;
+    --shop-cards-h-font-family: "Tactic Sans", Helvetica;
+    --shop-cards-h-font-weight: 500;
+    --shop-cards-h-font-size: 32px;
+    --shop-cards-h-letter-spacing: 0px;
+    --shop-cards-h-line-height: normal;
+    --shop-cards-h-font-style: normal;
+    --shop-cards-low-font-family: "Tactic Sans", Helvetica;
+    --shop-cards-low-font-weight: 400;
+    --shop-cards-low-font-size: 24px;
+    --shop-cards-low-letter-spacing: 0px;
+    --shop-cards-low-line-height: normal;
+    --shop-cards-low-font-style: normal;
+    --price-font-family: "Tactic Sans", Helvetica;
+    --price-font-weight: 500;
+    --price-font-size: 28px;
+    --price-letter-spacing: 0px;
+    --price-line-height: normal;
+    --price-font-style: normal;
+    --notification-date-font-family: "Open Sans", Helvetica;
+    --notification-date-font-weight: 300;
+    --notification-date-font-size: 15px;
+    --notification-date-letter-spacing: 0px;
+    --notification-date-line-height: normal;
+    --notification-date-font-style: normal;
+    --shadow: 5px 6px 18px 0px rgba(203, 134, 37, 0.34), 21px 24px 32px 0px rgba(203, 134, 37, 0.3),
+        47px 55px 43px 0px rgba(203, 134, 37, 0.18), 83px 97px 51px 0px rgba(203, 134, 37, 0.05),
+        130px 152px 56px 0px rgba(203, 134, 37, 0.01);
+    --variable-collection: rgba(170, 174, 182, 1);
+    --variable-collection-3: rgba(63, 69, 72, 1);
+    --variable-collection-dark-red: rgba(135, 53, 54, 1);
+    --variable-collection-5-black: rgba(242, 242, 242, 1);
+    --variable-collection-txt-on-grey: rgba(111, 111, 112, 1);
+    --variable-collection-red: rgba(222, 23, 23, 1);
+    --variable-collection-dark-red1: rgba(194, 46, 48, 1);
+    --variable-collection-border-radius: 3px;
+    --variable-collection-text-dim: rgba(118, 128, 140, 1);
+    --variable-collection-background-main: rgba(14, 20, 27, 1);
+}
+
+
+
+[data-variable-collection-mode="mode-1"] {
+    --variable-collection-border-radius: 3px;
+    --variable-collection-text-dim: rgba(118, 128, 140, 1);
+    --variable-collection-background-main: rgba(14, 20, 27, 1);
+}
+
+[data-variable-collection-mode="mode-2"] {
+    --variable-collection-border-radius: 2px;
+    --variable-collection-text-dim: rgba(255, 255, 255, 1);
+    --variable-collection-background-main: rgba(255, 255, 255, 1);
+}
+
+
+.frame {
+    position: relative;
+    width: 586px;
+    height: 544px;
+}
+
+.frame .text-wrapper {
+    position: absolute;
+    top: -1px;
+    left: 349px;
+    font-family: "Tactic Sans-Medium", Helvetica;
+    font-weight: 500;
+    color: #0f1011;
+    font-size: 42px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+}
+
+.frame .div {
+    gap: 51px;
+    position: absolute;
+    top: 106px;
+    left: 0;
+    display: inline-flex;
+    align-items: center;
+}
+
+.frame .div-2 {
+    gap: 7px;
+    position: relative;
+    flex: 0 0 auto;
+    display: inline-flex;
+    align-items: center;
+}
+
+.frame .text-wrapper-2 {
+    position: relative;
+    width: fit-content;
+    margin-top: -1px;
+    font-family: open-sans,;
+    font-weight: 300;
+    color: #0f1011;
+    font-size: 22px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+}
+
+.frame .component {
+    position: relative;
+    width: 24.68px;
+    height: 23px;
+}
+
+.frame .text-wrapper-3 {
+    position: relative;
+    width: fit-content;
+    margin-top: -1px;
+    font-family: open-sans,;
+    font-weight: 400;
+    color: #0f1011;
+    font-size: 22px;
+    letter-spacing: 0;
+    line-height: normal;
+}
+
+.frame .div-3 {
+    gap: 51px;
+    position: absolute;
+    top: 164px;
+    left: 4px;
+    display: inline-flex;
+    align-items: center;
+}
+
+.frame .div-4 {
+    gap: 51px;
+    position: absolute;
+    top: 222px;
+    left: 26px;
+    display: inline-flex;
+    align-items: center;
+}
+
+.frame .div-5 {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    position: relative;
+    flex: 0 0 auto;
+}
+
+.frame .div-6 {
+    gap: 51px;
+    position: absolute;
+    top: 280px;
+    left: 18px;
+    display: inline-flex;
+    align-items: center;
+}
+
+.frame .div-7 {
+    gap: 51px;
+    position: absolute;
+    top: 338px;
+    left: 23px;
+    display: inline-flex;
+    align-items: center;
+}
+
+.frame .div-8 {
+    gap: 51px;
+    position: absolute;
+    top: 396px;
+    left: 18px;
+    display: inline-flex;
+    align-items: center;
+}
+
+.frame .div-9 {
+    gap: 51px;
+    position: absolute;
+    top: 454px;
+    left: 17px;
+    display: inline-flex;
+    align-items: center;
+}
+
+.frame .div-10 {
+    gap: 51px;
+    position: absolute;
+    top: 512px;
+    left: 27px;
+    display: inline-flex;
+    align-items: center;
+}
+
+.frame .text-wrapper-4 {
+    position: absolute;
+    top: 105px;
+    left: 430px;
+    font-family: open-sans, sans-serif;
+    font-weight: 300;
+    color: #6F6F70;
+    font-size: 22px;
+    letter-spacing: 0;
+    line-height: normal;
+}
+
+.frame .text-wrapper-5 {
+    top: 163px;
+    position: absolute;
+    left: 429px;
+    font-family: open-sans, sans-serif;
+    font-weight: 300;
+    color: #6F6F70;
+    font-size: 22px;
+    letter-spacing: 0;
+    line-height: normal;
+}
+
+.frame .text-wrapper-6 {
+    top: 221px;
+    position: absolute;
+    left: 429px;
+    font-family: open-sans, sans-serif;
+    font-weight: 300;
+    color: #6F6F70;
+    font-size: 22px;
+    letter-spacing: 0;
+    line-height: normal;
+}
+
+.frame .text-wrapper-7 {
+    top: 279px;
+    position: absolute;
+    left: 429px;
+    font-family: open-sans, sans-serif;
+    font-weight: 300;
+    color: #6F6F70;
+    font-size: 22px;
+    letter-spacing: 0;
+    line-height: normal;
+}
+
+.frame .text-wrapper-8 {
+    top: 337px;
+    position: absolute;
+    left: 429px;
+    font-family: open-sans, sans-serif;
+    font-weight: 300;
+    color: #6F6F70;
+    font-size: 22px;
+    letter-spacing: 0;
+    line-height: normal;
+}
+
+.frame .text-wrapper-9 {
+    top: 395px;
+    position: absolute;
+    left: 429px;
+    font-family: open-sans, sans-serif;
+    font-weight: 300;
+    color: #6F6F70;
+    font-size: 22px;
+    letter-spacing: 0;
+    line-height: normal;
+}
+.frame .text-wrapper-10 {
+    top: 453px;
+    position: absolute;
+    left: 429px;
+    font-family: open-sans, sans-serif;
+    font-weight: 300;
+    color: #6F6F70;
+    font-size: 22px;
+    letter-spacing: 0;
+    line-height: normal;
+}
+
+.frame .text-wrapper-11 {
+    top: 511px;
+    position: absolute;
+    left: 429px;
+    font-family: open-sans, regular;
+    font-weight: 300;
+    color: #6F6F70;
+    font-size: 22px;
+    letter-spacing: 0;
+    line-height: normal;
+}
+
+.frame .group {
+    position: absolute;
+    width: 440px;
+    height: 9px;
+    top: 320px;
+    left: 362px;
+    background-color: var(--variable-collection-5-black);
+    border-radius: 41px;
+    transform: rotate(-90deg);
+}
+
+.frame .rectangle {
+    position: relative;
+    width: 50px;
+    height: 9px;
+    left: 372px;
+    background-color: var(--variable-collection);
+    border-radius: 32px;
+}

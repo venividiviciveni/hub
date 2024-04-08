@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index</title>
+    <link rel="stylesheet" href="../login/style.css" />
+</head>
+
+<body>
+    <div class="container">
+        <form action="../profile/profile-tasks.html">
+            <h2>giper<span>.fm</span></h2>
+            <div class="input-field">
+                <input placeholder="Логин" type="text" required />
+                <label class="label"></label>
+            </div>
+            <div class="input-field">
+                <input id="password-input" placeholder="Пароль" type="password" required />
+                <label class="label"></label>
+            </div>
+            
+            <span class="error" id="error-message">Пароль введен неверно</span>
+
+            <div class="forget">
+                <label for="Save-login">
+                    <input type="checkbox" id="Save-login" />
+                    <p>Запомнить меня</p>
+                </label>
+            </div>
+                    <button type="submit">Войти</button>
+            <div>
+                <a href="../404log/index.html">Восстановить пароль</a>
+            </div>
+            
+            
+        </form>
+            </div>
+
+    <script>
+        document.querySelector('form').addEventListener('submit', function(event) {
+            var passwordInput = document.getElementById('password-input');
+            var errorMessage = document.getElementById('error-message');
+
+            // Проверяем, правильный ли пароль
+            if (passwordInput.value !== '1111') {
+                errorMessage.style.display = 'block'; // Показываем сообщение об ошибке
+                event.preventDefault(); // Предотвращаем отправку формы
+            }
+        });
+    </script>
+</body>
+
+</html>
